@@ -1,4 +1,5 @@
 import { Expose } from 'class-transformer';
+import { User } from 'src/auth/user.entity';
 import {
   Column,
   Entity,
@@ -20,15 +21,15 @@ export class Attendee {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  @Expose()
-  name: string;
-
   @ManyToOne(() => Event, (event) => event.attendees, {
     nullable: false,
+    onDelete: 'CASCADE',
   })
   @JoinColumn()
   event: Event;
+
+  @Column()
+  eventId: number;
 
   @Column('enum', {
     enum: AttendeeAnswerEnum,
@@ -36,4 +37,11 @@ export class Attendee {
   })
   @Expose()
   answer: AttendeeAnswerEnum;
+
+  @ManyToOne(() => User, (user) => user.attended)
+  @Expose()
+  user: User;
+
+  @Column()
+  userId: number;
 }
