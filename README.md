@@ -1,3 +1,63 @@
+## Description
+
+NestJS project containing a small API for events with attendees and users.
+
+## Features
+
+- Docker-compose.yml with container for MySql, PostGres and Adminer
+- Controllers and services with repositories for CRUD operations
+- Generating JWT on registration or login
+- Authentication with JWT
+- Authorization with Guards
+- TypeORM
+- Interceptors and Data serialization
+- Data validation
+- OneToMany and OneToOne relation
+- Filtering, sorting and paginating data with QueryBuilder
+- Unit tests with Jest and Postman collection for API testing
+## Installation
+
+```bash
+$ npm install
+```
+
+```bash
+$ docker-compose up -d
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
+```
+
+## Test
+
+```bash
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
+
+# Postman
+Import the postman collection and DEV environment into Postman and execute requests
+```
+
+
+
+# NestJS
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
@@ -25,39 +85,6 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
-```bash
-$ npm install
-```
-
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
