@@ -28,6 +28,11 @@ $ docker-compose up -d
 ## Running the app
 
 ```bash
+# env
+create .env file inside the root folder and copy content of .env.dev into .env
+```
+
+```bash
 # development
 $ npm run start
 
